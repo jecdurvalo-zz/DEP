@@ -1,10 +1,7 @@
-<?php
-   $connection = mysqli_connect('localhost', 'root', 'fiap', 'loginapp');
-   if (!$connection) {
-     die("Erro de conexão" . mysqli_error());
-   }
+<?php include 'db.php';
+
    $query = "SELECT username FROM usuario";
-   $response = mysqli_query($connection, $query);
+   $result = mysqli_query($connection, $query);
 ?>
 
 <!DOCTYPE html>
@@ -24,18 +21,16 @@
           <br>
           <?php
             //Atribui a um array as respostas
-            while($row = mysqli_fetch_assoc($response)){
+            while($row = mysqli_fetch_row($result)){
           ?>
           <p>
             <?php
-              $implode = implode("", $row);
-              //echo "<pre>"
-              //print_r($row);
+              echo "<pre>";
+              print_r($row);
 
-              //$nome = $row[1];
-              //echo $nome
+              $nome = $row[1];
+              echo $nome;
 
-              echo $implode;
             }
             ?>
           </p>

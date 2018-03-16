@@ -1,18 +1,10 @@
 <!-- CONEXÃO C/ BANCO DE DADOS MYSQLI -->
-<?php
+<?php include 'db.php';
+
   if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
-
-
-    //'localhost', usuario, senha, nome do banco
-    $connection = mysqli_connect('localhost', 'root', 'fiap', 'loginapp');
-
-    //Caso exista erro de conexão, exiba a mensagem
-    if (!$connection) {
-        die('Erro de conexão: ' . mysqli_error());
-    }
 
     //CRUD - CREATE
         
