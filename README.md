@@ -8,26 +8,26 @@ FIAP 2TIN subject.
 - Concatenação
 - Operadores
 - Desafio 1 
-Informações Complementares: - Comentários
+- Informações Complementares: - Comentários
 
 ### Aula 2
 - If
 - Desafio 2
 - Operadores Logicos
 - Desafio 3 
-Informações Complementares: - Arrays
+- Informações Complementares: - Arrays
 
 ### Aula 3
 - For
 - While
 - Foreach
 - Desafio 4
-Informações Complementares: - Switch
+- Informações Complementares: - Switch
 
 ### Aula 4
 - Funções com Array, Matematica, Retorno, Parametros
 - Desafio 5, 6 
-Informações Complementares: - Funções
+- Informações Complementares: - Funções
 
 ### Aula 5
 - Variavel Global/Local
