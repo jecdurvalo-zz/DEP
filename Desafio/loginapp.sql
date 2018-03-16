@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Mar-2018 às 15:38
+-- Generation Time: 16-Mar-2018 às 14:15
 -- Versão do servidor: 5.7.20-log
 -- PHP Version: 7.1.11
 
@@ -30,19 +30,32 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
-  `user` varchar(32) NOT NULL,
-  `password` varchar(32) NOT NULL
+  `username` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `email` varchar(56) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `user`, `password`) VALUES
-(1, 'gabrielagv', '123456'),
-(5, 'fulano', '123'),
-(6, 'ciclano', '123456'),
-(7, 'beltrano', '123456789');
+INSERT INTO `usuario` (`id`, `username`, `password`, `email`) VALUES
+(3, 'gabrielag', '123', 'gabrielagv@live.com'),
+(4, 'fulano', '123456', 'fulano@hotmail.com'),
+(5, 'Ciclano', 'asdf', 'ciclano@gmail.com'),
+(6, 'beltrano', 'fsdfsdfsdf', 'beltrano@live.com'),
+(7, 'maria', 'fdsfsdfsdf', 'mariamaria@gmail.com'),
+(8, 'joao', 'asdasdasdasd', 'joao@gmail.com'),
+(9, 'ana', 'asdasdasd', 'ana@hotmail.com'),
+(10, 'lucas', 'sadasdasdasd', 'lucas@yahoo.com'),
+(11, 'mario', 'asdsadasdsad', 'mario@gmail.com'),
+(12, 'claudia', 'fsdfdsfsdfds', 'claudia@gmail.com'),
+(13, 'teste', '123', 'teste@teste'),
+(14, 'teste', '123', 'teste@teste'),
+(15, '', '', ''),
+(16, '', '', ''),
+(17, '', '', ''),
+(18, 'teste2', '123', 'teste2@teste');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +75,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

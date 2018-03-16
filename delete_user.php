@@ -1,11 +1,7 @@
-<?php
-   $connection = mysqli_connect('localhost', 'root', 'fiap', 'loginapp');
-   if (!$connection) {
-     die("Erro de conexão" . mysqli_error());
-   }
+<?php include "db.php";
+      include "functions.php";
 
-   $query = "SELECT user FROM usuario";
-   $response = mysqli_query($connection, $query);
+      delete();
 ?>
 
 <!DOCTYPE html>
@@ -20,20 +16,21 @@
       <div class="row">
         <div class="col-md-12">
           <br>
-          <h1>Usuários da plataforma</h1>
+          <h1>Deseja deletar seu cadastro? :(</h1>
           <hr>
           <br>
-          <?php
-            //Atribui a um array as respostas
-            while($row = mysqli_fetch_assoc($response)){
-          ?>
-          <p>
-            <?php
-              $implode = implode("", $row);
-              echo $implode;
-            }
-            ?>
-          </p>
+          <form action="delete_user.php" method="post">
+            <div class="form-group">
+            <label for="exampleFormControlSelect1">Escolha o ID</label>
+              <select name="id">
+                <?php
+                  show();
+                ?>   
+              </select>
+            </div>
+
+            <input type="submit" name="submit" value="Deletar" class="btn btn-default">
+          </form>
         </div>
       </div>
     </div>

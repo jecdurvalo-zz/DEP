@@ -1,11 +1,11 @@
 <!-- CONEXÃO C/ BANCO DE DADOS MYSQLI -->
 <?php
   if (isset($_POST['submit'])) {
-    $user = $_POST['user'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
     //'localhost', usuario, senha, nome do banco
-    $connection = mysqli_connect('localhost', 'root', 'fiap', 'loginapp');
+    $connection = mysqli_connect('localhost', 'root', 'fiap', 'classapp');
 
     //Caso exista erro de conexão, exiba a mensagem
     if (!$connection) {
@@ -13,19 +13,20 @@
     }
 
     //CRUD - CREATE
-    $query = "INSERT INTO usuario(user, password) VALUES ('$user', '$password')";
-
+        
+    $query = "INSERT INTO user(username, password) VALUES('$username', '$password')";
+        
     //Executa uma query
     //ysqli_query(conexão, query)
     $newUser = mysqli_query($connection, $query);
 
     //Validação
     if (!$newUser) {
-      die('Erro da criação de novo usuário: ' . mysqli_error());
+        die('Erro da criação de novo usuário: ' . mysqli_error($connection));
     }else {
-      echo "<div class='alert alert-success' role='alert'>Usuário cadastrado com sucesso!</div>";
+        echo "<div class='alert alert-success' role='alert'>Usuário cadastrado com sucesso!</div>";
     }
-  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,15 +45,16 @@
           <h6>Ainda não está cadastrado? Faça seu cadastro no formulário abaixo :)</h6>
           <hr>
           <br>
-          <form action="login_create.php" method="post">
+          <form action="create_user.php" method="post">
             <div class="form-group">
               <label for="text">Usuário</label>
-              <input type="text" name="user" placeholder="Nome de usuário" class="form-control">
+              <input type="text" name="username" placeholder="Nome de usuário" class="form-control">
             </div>
             <div class="form-group">
               <label for="password">Senha</label>
               <input type="password" name="password" placeholder="Senha" class="form-control">
             </div>
+
             <input type="submit" name="submit" value="Cadastrar" class="btn btn-default">
           </form>
         </div>
