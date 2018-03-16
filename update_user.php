@@ -32,7 +32,7 @@
             <div class="form-group">
               <select name="id">
                 <?php
-                  show();
+                  showData();
                 ?>   
               </select>
             </div>

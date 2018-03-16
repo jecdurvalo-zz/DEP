@@ -3,6 +3,6 @@
 
   //Caso exista erro de conexão, exiba a mensagem
   if (!$connection) {
-      die('Deu ruim! ' . mysqli_error());
+      die('Opa! Deu ruim :( ' . mysqli_error());
   } 
 ?>

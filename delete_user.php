@@ -19,17 +19,20 @@
           <h1>Deseja deletar seu cadastro? :(</h1>
           <hr>
           <br>
+
           <form action="delete_user.php" method="post">
+
             <div class="form-group">
             <label for="exampleFormControlSelect1">Escolha o ID</label>
               <select name="id">
                 <?php
-                  show();
+                  showData();
                 ?>   
               </select>
             </div>
 
             <input type="submit" name="submit" value="Deletar" class="btn btn-default">
+            
           </form>
         </div>
       </div>

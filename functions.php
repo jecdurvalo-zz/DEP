@@ -1,27 +1,26 @@
 <?php include "db.php";
   
-  function show(){
-    //Variavel global
+  function showData(){
+    
+    // Sempre que for criar uma função é necessário usar a variável global
     global $connection;
   
     $query = "SELECT * FROM user";
-    $result = mysqli_query($connection, $query);
+    $result = mysqli_query ($connection, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {
        $id = $row['id'];
-        echo "<option value='$id'>$id</option>";
+       echo "<option value='$id'>$id</option>";
       }
   }
 
-  //Desafio 8.1
   function update(){
     
     global $connection; 
   
     $query = "SELECT * FROM user";
     $result = mysqli_query($connection, $query);
-    //include: insere um arquivo, dá warning porém funfa
-    //require: '', porém para a aplicação
+   
 
     if(isset($_POST['submit'])){
       $username = $_POST['username'];
