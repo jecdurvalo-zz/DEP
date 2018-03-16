@@ -8,31 +8,31 @@ FIAP 2TIN subject.
 - Concatenação
 - Operadores
 - Desafio 1 
-- Informações Complementares: - Comentários
+* Informações Complementares: - Comentários *
 
 ### Aula 2
 - If
 - Desafio 2
 - Operadores Logicos
 - Desafio 3 
-- Informações Complementares: - Arrays
+* Informações Complementares: - Arrays *
 
 ### Aula 3
 - For
 - While
 - Foreach
 - Desafio 4
-- Informações Complementares: - Switch
+* Informações Complementares: - Switch *
 
 ### Aula 4
 - Funções com Array, Matematica, Retorno, Parametros
 - Desafio 5, 6 
-- Informações Complementares: - Funções
+* Informações Complementares: - Funções *
 
 ### Aula 5
 - Variavel Global/Local
 - PHP My Admin 
-- Informações Complementares: - Formulário
+* Informações Complementares: - Formulário *
 
 ### Aula 6
 - Desafio 7
@@ -46,4 +46,4 @@ FIAP 2TIN subject.
 - Login READ 
 - Desafio 8
 - Delete
-- Informações Complementares: - Login CREATE, Update
+* Informações Complementares: - Login CREATE, Update *
