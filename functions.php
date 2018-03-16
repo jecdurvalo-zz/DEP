@@ -15,6 +15,7 @@
 
   //Desafio 8.1
   function update(){
+    
     global $connection; 
   
     $query = "SELECT * FROM user";
