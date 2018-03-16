@@ -25,14 +25,13 @@
           ?>
           <p>
             <?php
-              $implode = implode(" <br>", $row);
-              //echo "<pre>"
-              //print_r($row);
+              echo "<pre>";
+              print_r($row);
 
-              //$nome = $row[1];
-              //echo $nome
-
-              echo $implode;
+              $nome = $row[1];
+              echo $nome;
+              
+              echo "</pre>";
             }
             ?>
           </p>

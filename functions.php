@@ -39,7 +39,7 @@
       if (!$resultQuery) {
         die("Falha na atualização: " . mysqli_error($connection));
       }else{
-        echo "<div class='alert alert-danger' role='alert'>Usuário atualizado com sucesso!</div>";
+        echo "<div class='alert alert-success' role='alert'>Usuário atualizado com sucesso!</div>";
       }
     }
   }
@@ -53,7 +53,7 @@
     if(isset($_POST['submit'])){
       $id = $_POST['id'];
 
-      $updateQuery = "DELETE FROM user WHERE id = $id ";
+      $updateQuery = "DELETE FROM user WHERE id = $id";
 
       $resultQuery = mysqli_query($connection, $updateQuery);
       // $query .=    --> concatenar variavel

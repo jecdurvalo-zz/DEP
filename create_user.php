@@ -1,29 +1,23 @@
 <!-- CONEXÃO C/ BANCO DE DADOS MYSQLI -->
-<?php
+<?php include 'db.php';
+
   if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    //'localhost', usuario, senha, nome do banco
-    $connection = mysqli_connect('localhost', 'root', 'fiap', 'classapp');
-
-    //Caso exista erro de conexão, exiba a mensagem
-    if (!$connection) {
-        die('Erro de conexão: ' . mysqli_error());
-    }
+   
 
     //CRUD - CREATE
         
     $query = "INSERT INTO user(username, password) VALUES('$username', '$password')";
         
     //Executa uma query
-    //ysqli_query(conexão, query)
+    //mysqli_query(conexão, query)
     $newUser = mysqli_query($connection, $query);
 
-    //Validação
+    //Validação de usuário
     if (!$newUser) {
         die('Erro da criação de novo usuário: ' . mysqli_error($connection));
-    }else {
+    } else {
         echo "<div class='alert alert-success' role='alert'>Usuário cadastrado com sucesso!</div>";
     }
 }
