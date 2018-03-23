@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-12">
           <br>
-          <h1>Atualizar cadastro</h1>
+          <h2>Atualizar cadastro</h2>
           <h6>Atualize seu cadastro aqui :)</h6>
           <hr>
           <br>

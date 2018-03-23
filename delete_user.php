@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-12">
           <br>
-          <h1>Deseja deletar seu cadastro? :(</h1>
+          <h2>Deseja deletar seu cadastro? :(</h2>
           <hr>
           <br>
 

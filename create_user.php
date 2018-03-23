@@ -3,13 +3,17 @@
       createUser();
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
 <?php include 'header.php'; ?>
   
+<body>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <br>
-          <h1>Cadastro</h1>
+          <h2>Cadastro</h2>
           <h6>Ainda não possui cadastro? Faça seu cadastro no formulário abaixo :)</h6>
           <hr>
           <br>
