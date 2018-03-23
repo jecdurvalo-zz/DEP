@@ -32,7 +32,14 @@
 
              <div class="form-group">
               <label for="text">HP</label>
-              <input type="text" name="hp" placeholder="HP" class="form-control">
+              <input type="range" min="0" max="100" values="0" step="1" onchange="showValue(this.value)" name="hp">
+               <span id="range" name="hp">0</span>
+
+               <script type="text/javascript">
+                function showValue(newValue){
+                    document.getElementByID("range".innerHTML = newValue);
+                }
+               </script>
             </div>
 
             <input type="submit" name="submit" value="Cadastrar" class="btn btn-default">
