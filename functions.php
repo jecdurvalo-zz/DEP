@@ -8,7 +8,12 @@
   if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-             
+    
+    // Tratamento de SQL Injection
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+    
+
     $query = "INSERT INTO user(username, password) VALUES('$username', '$password')";
   
     $newUser = mysqli_query($connection, $query);
