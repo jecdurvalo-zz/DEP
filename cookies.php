@@ -3,8 +3,6 @@
     $valor  = 100;
     $expira = time() + (60 * 60 * 24 * 30);
 
-    setcookie($nome, $valor, $expira);
-
     ?>
 
 <!DOCTYPE html>
@@ -14,6 +12,14 @@
     <title>Cookies</title>
   </head>
   <body>
+  <?php 
+    if(isset($_COOKIE['NomeDoCookie'])){
+        echo "Oi sumido! Você já tem o cookie ( ͡° ͜ʖ ͡°)";
+    }else{
+        echo "<img src='img/cookie.gif'>";
+        setcookie($nome, $valor, $expira);
+    }
+  ?>
    
     
   </body>
