@@ -25,7 +25,7 @@
                      $cat_nome = $row['cat_nome'];
                     
                     echo '<tr>';
-                    echo '<td>'  $cat_id . '</td>';
+                    echo '<td>' . $cat_id . '</td>';
                     echo '<td>' . $cat_nome . '</td>';
                     echo '</tr>';
     }
@@ -33,7 +33,27 @@
 
 
     function adicionarCategoria(){
-        
+        global $connection;
+
+        if (isset($_POST['adicionar'])) {
+            $cat_nome = $_POST['cat_nome'];
+
+            if($cat_nome == ""){
+                echo "<div class='alert alert-danger' role='alert'>Insira uma categoria!!</div>";
+            } else{
+                // Tratamento de SQL Injection
+                  $cat_nome = mysqli_real_escape_string($connection, $cat_nome);
+            
+                  $query = "INSERT INTO categoria (cat_nome) VALUES('$cat_nome')";
+          
+                 $novaCategoria = mysqli_query($connection, $query);
+                    if (!$novaCategoria) {
+                      die('Erro da criação de novo usuário: ' . mysqli_error($connection));
+                       } else {
+                    echo "<div class='alert alert-success' role='alert'>Categoria adicionada com sucesso!</div>";
+            }
+          }
+        }
     }
 
 ?>

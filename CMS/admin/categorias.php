@@ -1,5 +1,7 @@
 <?php include "includes/header.php";
-      include "../includes/functions.php"   ?>
+      include "../includes/functions.php"
+      
+      ?>
 
 <div id="wrapper">
 
@@ -19,7 +21,9 @@
                     </h1>
 
                     <div class="col-sm-6">
-                        <form action="post">
+                        <form action="categorias.php" method="POST">
+
+                            <?php adicionarCategoria(); ?>
 
                             <label for="cat_nome">Adicionar categoria </label>
                             <div class="form-group">
