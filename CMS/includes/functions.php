@@ -27,6 +27,8 @@
                     echo '<tr>';
                     echo '<td>' . $cat_id . '</td>';
                     echo '<td>' . $cat_nome . '</td>';
+                    echo "<td><a href='categorias.php?delete=
+                    {$cat_id}'>Apagar</td>";
                     echo '</tr>';
     }
 }
