@@ -23,7 +23,7 @@
                     <div class="col-sm-6">
                         <form action="categorias.php" method="POST">
 
-                            <?php adicionarCategoria(); ?>
+                            <?php add(); ?>
 
                             <label for="cat_nome">Adicionar categoria </label>
                             <div class="form-group">
@@ -35,6 +35,21 @@
                             </div>
 
                         </form>
+
+                        <hr>
+
+                        <form action="categorias.php" method="POST">
+
+                            <?php edit(); ?>
+
+                            <label for="cat_nome">Editar categoria </label>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary" name="adicionar" value="ATUALIZAR">
+                            </div>
+
+                        </form>
+
                     </div>
 
                     <div class="col-sm-6">
@@ -50,10 +65,11 @@
                             <tbody>
                                 <tr>
                                     <?php lerCategoria(); ?>
+                                    <?php delete();?>
                                 </tr>
                             </tbody>
                         </table>
-                        
+
                     </div>
 
                 </div>
