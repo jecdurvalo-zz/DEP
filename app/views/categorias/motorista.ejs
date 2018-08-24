@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Motorista</title>
+</head>
+
+<body>
+    <h1>Lista de motorista</h1>
+    <table>
+     <tbody>
+      <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Sobrenome</td>
+        <td>RG</td>
+        <td>CPF</td>
+        <td>CEP</td>
+      </tr>
+
+      <% for(var i = 0; i < motorista.length; i++) { %>
+        <tr>
+          <td><%= motorista[i].id_motorista %></td>
+          <td><%= motorista[i].nome %></td>
+          <td><%= motorista[i].sobrenome %></td>
+          <td><%= motorista[i].rg %></td>
+          <td><%= motorista[i].cpf %></td>
+          <td><%= motorista[i].cep %></td>
+        </tr>
+      <% } %>
+
+    </tbody>
+  </table>
+
+  <script>
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Moto</title>
+</head>
+
+<body>
+    <h1>Lista de motos</h1>
+    <table>
+     <tbody>
+      <tr>
+			<td>ID</td>
+			<td>Marca</td>
+			<td>Modelo</td>
+			<td>Cor</td>
+			<td>Placa</td>
+      </tr>
+
+      <% for(var i = 0; i < moto.length; i++) { %>
+        <tr>
+          <td><%= moto[i].id_moto %></td>
+          <td><%= moto[i].marca %></td>
+          <td><%= moto[i].modelo %></td>
+          <td><%= moto[i].cor %></td>
+          <td><%= moto[i].placa %></td>
+        </tr>
+      <% } %>
+
+    </tbody>
+  </table>
+
+  <script>
+      </script>
+
+</body>
+
+</html>
