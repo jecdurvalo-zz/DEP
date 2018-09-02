@@ -1,23 +1,12 @@
-module.exports = function (app) {
+module.exports = function(app) {
 
-    var mysql = require('mysql');
-    
-    app.get('/produtos', function (req, res) {
+  app.get('/produtos', function(request, response){
 
-        var connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: 'jobinhaa',
-            database: 'sistema_produtos'
-        });
+    var connection = app.config.db();
+    var produtosModel = app.app.models.produtosModel;
 
-        connection.query(
-            'SELECT * FROM produto',
-            function (error, result) {
-                //res.send(result);
-                res.render("produtos/produtos", {produtos: result});
-            }
-        );
+    produtosModel.getProdutos(connection, function(error, result) {
+      response.render("produtos/produtos", { produtos: result });
     });
-
+  });
 }

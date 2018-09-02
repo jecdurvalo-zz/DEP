@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media</title>
+</head>
+<body>
+    <center>
+        <h1>Média</h1>
+    </center>
+    
+    <script>
+        function mediaNotas() {
+            var notaNAC = prompt("Nota da NAC");
+            var notaPS = prompt("Nota da PS");
+            var notaAM = prompt("Nota do AM");
+
+            var media = 0;
+            var nac = 0.2;
+            var am = 0.3;
+            var ps = 0.5;
+
+            media = (nac * notaNAC) + (ps * notaPS) + (am * notaAM);
+            var arredondaMedia = ((Math.round(media * 100)/100));
+            return arredondaMedia;
+        }
+
+        document.write("<center>Média das notas: </center>" + "<center>" + mediaNotas() + "</center>");
+    </script>
+</body>
+</html>
