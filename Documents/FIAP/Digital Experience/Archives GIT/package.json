@@ -1,0 +1,33 @@
+{
+  "name": "aula16",
+  "version": "1.0.0",
+  "description": "primeiro projeto em node.js",
+  "main": "app/views/home/index.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielagomesv/Class-Digital_Experience_Plataform.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Gabriela Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielagomesv/Class-Digital_Experience_Plataform/issues"
+  },
+  "homepage": "https://github.com/gabrielagomesv/Class-Digital_Experience_Plataform#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mysql": "^2.16.0",
+    "npm": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
