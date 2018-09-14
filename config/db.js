@@ -7,13 +7,13 @@ var mysql_connection = function() {
         {
             host: 'Localhost',
             user: 'root',
-            password: 'c714hj2nkq',
+            password: 'jobinhaa',
             database: 'sistema_produtos'
         }
     );
 }
 
 module.exports = function() {
-    console.log(':::: Autoload successfully load connection module!');
+    console.log('Agora vai!');
     return mysql_connection;
 }

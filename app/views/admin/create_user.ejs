@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <% if(validacao){ %>
+    <ul>
+        <% for(var i = 0; i < validacao.length; i++) { %>
+        <li>
+            <%= validacao[i].msg %>
+        </li>
+        <% } %>
+    </ul>
+
+    <% } %>
+
+
+    <h2>Adicionar clientes</h2>
+    <form action="/add_user" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" value="<%= usuario.nome %>">
+        <br>
+        <br>
+
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %>">
+        <br>
+        <br>
+
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg" value="<%= usuario.rg %>">
+        <br>
+        <br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" value="<%= usuario.cpf %>">
+        <br>
+        <br>
+
+        <label for="cpf">Endereco</label>
+        <input type="text" name="endereco" id="endereco" value="<%= usuario.endereco %>">
+        <br>
+        <br>
+
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" value="<%= usuario.cep %>">
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

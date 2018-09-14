@@ -1,16 +1,35 @@
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get('/create_produtos', function(request, response){
-    response.render('admin/create_produtos');
+  app.get('/create_produtos', function (request, response) {
+    response.render('admin/create_produtos', {
+      validacao: {},
+      produto: {}
+    });
   });
 
-  app.post('/salvar', function(request, response){
+  app.post('/salvar', function (request, response) {
     var produto = request.body;
 
-    var connection = app.config.db();
-    var produtosModel = app.app.models.produtosModel;
+    request.assert('nome', 'Nome é obrigatório!').notEmpty();
+    request.assert('descricao', 'Descrição é obrigatório').notEmpty();
 
-    produtosModel.salvarProdutos(produto, connection, function(error, result) {
+    var erros = request.validationErrors();
+
+    if (erros) {
+      response.render('admin/create_produtos', {
+        validacao: erros,
+        produto: produto
+      });
+      return;
+    }
+
+    // conexão
+    var connection = app.config.db();
+
+    // instance new 
+    var produtosModel = new app.app.models.ProdutosDAO(connection);
+
+    produtosModel.salvarProdutos(produto, function (error, result) {
       response.redirect("/produtos");
     });
   });
