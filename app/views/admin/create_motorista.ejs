@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <title>Motorista</title>
+</head>
+
+<body>
+    <% if(validacao){ %>
+    <ul>
+        <% for(var i = 0; i < validacao.length; i++) { %>
+        <li>
+            <%= validacao[i].msg %>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+
+
+    <div class="col-md-12"><h2>Adicionar clientes</h2></div>
+    <form action="/add_user" method="post">
+
+        <div class="form-group col-md-8">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" value="<%= motorista.nome %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" value="<%= motorista.sobrenome %>" class="form-control">
+        </div>
+    
+        <div class="form-group col-md-8">
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg" value="<%= motorista.rg %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" value="<%= motorista.cpf %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="cpf">Endereco</label>
+        <input type="text" name="endereco" id="endereco" value="<%= motorista.endereco %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" value="<%= motorista.cep %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+    <div class="col-md-6"><a href="/motorista">Visualizar motoristas</a></div>
+
+</body>
+
+</html>
