@@ -1,13 +1,6 @@
-module.exports = function(app) {
+module.exports = function (app) {
 
-    app.get('/moto', function(req, resp){
-  
-      var connection = app.config.db();
-      var motoModel = app.app.models.motoModel;
-  
-      motoModel.getMoto(connection, function(error, result) {
-        resp.render("categorias/moto", { moto: result });
-      });
-    });
-  }
-  
+  app.get('/moto', function (request, response) {
+    app.app.moto.create_moto(app, request, response)
+  });
+}
