@@ -103,6 +103,7 @@
     - Conexão com  MySQL
 
   - **Aula18**
-
-
     - Continuação do projeto Aula17
+
+ - **Aula 20**
+    - Express-validator
