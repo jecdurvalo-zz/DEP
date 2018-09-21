@@ -6,7 +6,7 @@ var mysql_connection = function(){
     return connection = mysql. createConnection({
         host: 'localhost',
         user: 'root',
-        password: 'labfiap$2018',
+        password: 'jobinhaa',
         database: 'nac',
     }
     );

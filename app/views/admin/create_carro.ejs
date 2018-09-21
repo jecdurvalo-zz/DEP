@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <title>Cadastrar Carros</title>
+</head>
+
+<body>
+    <% if(validacao){ %>
+    <ul>
+        <% for(var i = 0; i < validacao.length; i++) { %>
+        <li>
+            <%= validacao[i].msg %>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+
+
+    <div class="col-md-12"><h2>Adicionar carros</h2></div>
+    <form action="/add_carro" method="post">
+
+        <div class="form-group col-md-8">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" value="<%= usuario.nome %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %>" class="form-control">
+        </div>
+    
+        <div class="form-group col-md-8">
+        <label for="rg">RG:</label>
+        <input type="text" name="rg" id="rg" value="<%= usuario.rg %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" value="<%= usuario.cpf %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="cpf">Endereco</label>
+        <input type="text" name="endereco" id="endereco" value="<%= usuario.endereco %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" id="cep" value="<%= usuario.cep %>" class="form-control">
+        </div>
+
+        <div class="form-group col-md-8">
+        <button type="submit" value="Enviar" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+
+    <div class="col-md-6"><a href="/usuarios">Visualizar usuarios</a></div>
+
+</body>
+
+</html>
