@@ -14,7 +14,12 @@ app.use(expressValidator());
 
 //Autoload das rotas
 //.then('config/db') => Autoload do DB, tem que ter extensao
-consign().include('app/routes').then('app/models').then('config/db.js').into(app);
+consign()
+.include('app/routes')
+.then('app/models')
+.then('config/db.js')
+.then('app/controller')
+.into(app);
 
 //A Engine de view foi altera para EJS. Para configurar isso no Node:
 app.set('view engine', 'ejs');

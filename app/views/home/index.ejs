@@ -5,9 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Página Inicial</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
 </head>
 <body>
-  <h1>Hello Stranger</h1>
-  <blockquote>It's been a while</blockquote>
+  <h1 class="col-md-12">Hello Stranger</h1>
+  <blockquote class="col-md-12">It's been a while</blockquote>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% for(var i = 0; i < produtos.length; i++) { %>
+        <tr>
+          <td><%= produtos[i].id_produto %></td>
+          <td><%= produtos[i].nm_produto %></td>
+          <td><%= produtos[i].ds_produto %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+  <div class="col-md-12"><a href="/create_produtos">Cadastrar produtos</a></div>
+  <div class="col-md-12"><a href="/create_usuarios">Cadastrar usuarios</a></div>
 </body>
 </html>
