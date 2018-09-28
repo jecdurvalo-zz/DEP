@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+    <title>Lista clientes</title>
+  </head>
+  <body>
+    <div><h2 class="col-md-12">Clientes</h2> </div>
+    <table class="table"> 
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>RG</th>
+          <th>CPF</th>
+          <th>Endereco</th>
+          <th>CEP</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i = 0; i < usuario.length; i++) { %>
+          <tr>
+            <td><%= usuario[i].id %></td>
+            <td><%= usuario[i].nome %></td>
+            <td><%= usuario[i].sobrenome %></td>
+            <td><%= usuario[i].rg %></td>
+            <td><%= usuario[i].cpf %></td>
+            <td><%= usuario[i].endereco %></td>
+            <td><%= usuario[i].cep %></td>
+          </tr>
+        <% } %> 
+      </tbody>
+    </table>
+
+    <div class="col-md-6"><a href="/create_user">Cadastrar usuarios</a></div>
+
+  </body>
+</html>

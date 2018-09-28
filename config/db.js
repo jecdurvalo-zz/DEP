@@ -1,19 +1,19 @@
 var mysql = require('mysql');
 
-var mysql_connection = function(){
-    console.log("Banco de dados ok!");
-
-    return connection = mysql. createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'jobinhaa',
-        database: 'nac',
-    }
+//Apenas quem chamar a variável vai conectar com o banco
+var mysql_connection = function() {
+    console.log('Conexão com DB estabelecida!');
+    return connection = mysql.createConnection(
+        {
+            host: 'Localhost',
+            user: 'root',
+            password: 'jobinhaa',
+            database: 'sistema_produtos'
+        }
     );
 }
 
 module.exports = function() {
-    console.log('Tudo funcionando!');
+    console.log('Agora vai!');
     return mysql_connection;
 }
-
