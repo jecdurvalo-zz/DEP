@@ -13,6 +13,8 @@ module.exports.cadastrar = function(application, req, res){
     var erros = req.validationErrors();
 
     if(erros){
-        res.send('Deu ruim!');
-    }
-}
+        res.render('cadastro');
+        validacao: erros,
+      });
+
+      return;

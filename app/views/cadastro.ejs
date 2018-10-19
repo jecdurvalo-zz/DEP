@@ -18,6 +18,16 @@
 
 	<body class="body-index">
 
+			<% if(validacao){ %>
+				<ul>
+					<% for(var i = 0; i < validacao.length; i++) { %>
+					<li>
+						<%= validacao[i].msg %>
+					</li>
+					<% } %>
+				</ul>
+				<% } %>
+
 		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
 				<form class="form-inline form-entrar">
