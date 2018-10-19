@@ -31,5 +31,5 @@ module.exports.cadastrar = function (application, req, res) {
 
     UsuarioDAO.inserirUsuario(dadosForm);
 
-    //res.send('Podemos cadastrar!');
+    res.send('Podemos cadastrar!');
 }
