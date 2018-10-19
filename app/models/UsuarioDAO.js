@@ -16,8 +16,20 @@ UsuarioDAO.prototype.inserirUsuario = function (usuario) {
 UsuarioDAO.prototype.autenticar = function (usuario, req, res) {
     this._connection.open(function (err, mongoclient) {
         mongoclient.collection("usuarios", function (err, collection) {
-            collection.find(usuario).toArray(function(err, result){
-                console.log(result);
+            collection.find(usuario).toArray(function (err, result) {
+                //console.log(result);
+
+                if (result[0] != undefined) {
+                    req.session.autorizado = true;
+
+                }
+
+                if (req.session.autorizado) {
+                    res.send('Usuário, se encontra na base de dados');
+                } else {
+                    res.send('Usuário não existe');
+                }
+
             });
             mongoclient.close();
         });
