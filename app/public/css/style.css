@@ -1,37 +1,89 @@
-body{
-	background:#F8F8F8;
+.body-index{
+	background: #010101;
 }
 
-a:hover{
-	text-decoration: none;
-	color:#000;
+.body-jogo{
+	background-image: url('../images/chaves/vila.jpeg');
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-.produto_wrapper{
-	background-color: #FFF;   
+.form-entrar {
+	padding-top: 10px;
+}
+
+.form-cadastro {
+	color: #fff;
+}
+
+.form-cadastro img{
+	margin: 0 auto;
+}
+
+.sair {
+	padding-top: 10px;
+}
+
+.barra-superior {
+	background-color: #fff;
 	padding:15px;
-	margin-bottom:15px;
-	box-shadow: 1px 1px 2px #C3C3C3;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
-.navbar{
-	background:#FFF;
+.barra-superior {
+	text-align:center;
 }
 
-
-.produto_nome{
-	color:#000;
-	font-size:22px;
-	text-decoration: none;
+.barra-superior span{
+	display: block;
+	width: 100%;
+	font-weight: bold;
 }
 
-.produto_descricao{
-	color:#333;
-	margin-right:10px;
+.barra-inferior {
+    position: absolute;
+    bottom: 0;
+	width:100%;
+	text-align:center;
+    height: auto;
+	padding:15px;
+    background-color: #fff;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
 }
 
-.ver_mais{
-	text-align: center;
-	background:#FFF;
-	padding:20px;
+.barra-inferior span{
+	display: block;
+	width: 100%;
+	font-weight: bold;
+}
+
+.acoes{
+	background-color: #fff;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+	padding:15px;
+}
+
+.acoes span{
+	color: #333333;
+}
+
+#pergaminhos{
+	max-height: 180px;
+	overflow: auto;
+}
+
+.casa span{
+	margin-top:-20px;
+	margin-left:10px;
+	display: block;
+	font-weight: bold;
+	color:#fff;
+	font-size: 15px;
 }

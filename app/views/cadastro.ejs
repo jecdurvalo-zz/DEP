@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Chaves - NodeJS</title>
+		
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+		<!-- incluindo css -->
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body class="body-index">
+
+		<nav class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<form class="form-inline form-entrar">
+					<div class="form-group">				
+						<button type="button" class="btn btn-success">Voltar</button>
+					</div>
+				</form>
+			</div>
+			
+		</nav>
+
+	    <div class="container">
+	    		
+			<form class="form-cadastro" action="/cadastrar" method="POST">
+			
+				<div class="row">
+					<div class="col-xs-4">
+						<div class="form-group">
+							<label for="nome" class="col-sm-2 col-form-label">Nome</label>
+							<input type="nome" class="form-control" id="nome" name="nome" placeholder="Nome">
+						</div>
+					</div>
+					
+					<div class="col-xs-4">
+						<div class="form-group">
+							<label for="usuario" class="col-sm-2 col-form-label">Usuário</label>
+							<input type="usuario" class="form-control" id="usuario" name="usuario" placeholder="Usuário">
+						</div>
+					</div>
+					
+					<div class="col-xs-4">
+						<div class="form-group">
+							<label for="senha" class="col-sm-2 col-form-label">Senha</label>
+							<input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+				
+        			<div class="col-xs-2">
+        				<img src="images/chaves/barriga.jpeg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="barriga"> Seu Barriga
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/chaves.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="chaves"> Chaves
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/chiquinha.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="chiquinha"> Chiquinha
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/clotilde.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="clotilde"> Bruxa do 71
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/florinda.jpeg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="florinda"> Dona Florinda
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/girafales.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="girafales"> Prof Girafales
+						</center>
+        			</div>
+        		</div>
+				
+				<div class="form-group row">
+				
+					<div class="col-xs-3"></div>
+				
+        			<div class="col-xs-2">
+        				<img src="images/chaves/kiko.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="kiko"> Kiko
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/madruga.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="madruga"> Seu Madruga
+						</center>
+        			</div>
+					
+					<div class="col-xs-2">
+        				<img src="images/chaves/nhonho.jpg" class="img-responsive img-radio">
+						<center>
+							<input type="radio" id="left-item" name="casa" value="nhonho"> Nhonho
+						</center>
+        			</div>
+					
+					<div class="col-xs-3"></div>
+				</div>		
+				
+			
+				<div class="form-group row">
+					<button type="submit" class="btn btn-primary">Confirmar cadastro</button>
+				</div>
+				
+
+			</form>
+					
+	    </div>	
+		
+	</body>
+</html>

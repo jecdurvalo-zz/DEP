@@ -1,10 +1,7 @@
-//Exporting server configs
+/* importar as configurações do servidor */
 var app = require('./config/server');
 
-//Sobe o servidor utilizando o listen(), passando a porta e uma function de callback
-app.listen(2001, function() {
-  //console.log("Server is up with Express");
-  console.log(":::Working!!");
-});
-
-
+/* parametrizar a porta de escuta */
+app.listen(8080, function(){
+	console.log('Servidor online');
+})
